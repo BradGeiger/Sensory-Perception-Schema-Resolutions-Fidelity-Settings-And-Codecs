@@ -1,0 +1,42 @@
+Your observation aligns with **Psychoacoustics** and **Psychovisuals**, the study of how humans actually process sensory data. Designing systems that exceed these biological thresholds leads to "wasted fidelity," where the hardware consumes energy and processing power to produce signals that the human brain simply discards or finds fatiguing.
+
+## 1. Visual Perception Thresholds
+
+The "frame rate" of the human eye is not a single number but a set of varying thresholds based on the type of motion and light.
+
+* **Critical Flicker Fusion (CFF):** This is the frequency at which a flickering light appears steady. For most people, this is **60–90 Hz**. Beyond this, the brain "fuses" the images.
+* **Motion Fluidity:** To perceive smooth motion without "judder," **24–30 FPS** is the minimum. However, for high-speed tracking (like gaming), benefits continue up to **120–240 Hz**.
+* **The "Wasted" Zone:** Most research suggests that above **240–300 Hz**, the marginal utility for the average user drops to zero. System resources spent pushing to 500 Hz+ often result in "overstimulation" or "uncanny valley" effects where motion looks unnaturally sharp.
+
+---
+
+## 2. Auditory Fidelity Thresholds
+
+Audio systems often chase high sample rates, but the biological "bottleneck" is the cochlea.
+
+* **Frequency Range:** The standard limit is **20 Hz to 20 kHz**. While infants can hear slightly higher, most adults cap out at **15–17 kHz**.
+* **Nyquist Theorem & Sampling:** To perfectly reconstruct a 20 kHz wave, you only need a **44.1 kHz** sample rate (the CD standard). Sampling at 192 kHz provides no audible benefit to the human ear and can actually introduce "intermodulation distortion" in some speakers, creating *worse* sound.
+* **Bit Depth:** 16-bit audio provides 96 dB of dynamic range, which is more than enough for most environments. 24-bit is useful for professional editing (headroom), but for playback, it often exceeds the "noise floor" of the human ear.
+
+---
+
+## 3. Perceptual Codecs (Efficiency vs. Overload)
+
+Modern codecs are designed specifically to discard "irrelevant" data that the brain would filter out anyway.
+
+| Sensory Data | Codec Example | Perceptual Logic (The "Trick") |
+| --- | --- | --- |
+| **Audio** | **AAC / Opus / MP3** | **Temporal/Simultaneous Masking:** If a loud sound (drum) and a quiet sound (flute) happen at once, the brain "masks" the quiet one. The codec deletes the flute data entirely. |
+| **Visual** | **H.264 / H.265 (HEVC)** | **Chroma Subsampling:** The eye is more sensitive to brightness (luminance) than color (chrominance). These codecs compress color data more heavily than light data. |
+| **Visual** | **Motion Compensation** | It only updates the *moving* parts of a frame, assuming the brain will "fill in" the static background. |
+
+### The "Overload" Effect
+
+When systems provide "overloaded quality"—such as ultra-high-resolution textures with no motion blur or extremely high-frequency audio—it can cause **Sensory Fatigue**.
+
+1. **Neural Drain:** The brain attempts to process high-frequency "noise" that it can't resolve into a meaningful pattern.
+2. **Unnatural Input:** Natural environments have inherent "softness" (biological motion blur and air-damped sound). Perfectly "crisp" digital signals lack these cues, leading to headaches or "eye strain."
+
+> **Key Threshold:** For most human interfaces, the "Goldilocks Zone" is roughly **4K resolution at 120Hz** and **48kHz/24-bit audio**. Anything beyond this typically hits the law of diminishing returns for biological perception.
+
+Would you like me to look into the specific **latency thresholds** (the delay between action and perception) that cause "simulator sickness" in VR and high-speed interfaces?
