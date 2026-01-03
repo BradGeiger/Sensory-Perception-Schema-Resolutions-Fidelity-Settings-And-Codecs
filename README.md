@@ -1,0 +1,1 @@
+# Sensory-Perception-Schema-Resolutions-Fidelity-Settings-And-Codecs
